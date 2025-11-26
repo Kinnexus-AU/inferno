@@ -1,0 +1,21 @@
+require:
+  - rubocop-erb
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'kinnexus_test_kit.gemspec'
+    - 'lib/kinnexus_test_kit/ext/**/*'
+
+Style/Documentation:
+  Enabled: false
+Layout/LineLength:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+Naming/ClassAndModuleCamelCase:
+  Enabled: false

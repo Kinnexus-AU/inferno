@@ -1,0 +1,50 @@
+{
+  "ig": {
+    "id": "fhir.kinnexus",
+    "version": "0.0.1",
+    "name": "Kinnexus Implementation Guide",
+    "link": "https://kinnexus.org/ImplementationGuide/fhir.kinnexus",
+    "cs_profile_url": "https://kinnexus.org/CapabilityStatement/kinnexus-responder",
+    "cs_version_specific_url": "https://kinnexus.org/CapabilityStatement/kinnexus-responder",
+    "package_archive_path": "lib/kinnexus_test_kit/igs/0.0.1.tgz"
+  },
+  "suite": {
+    "title": "Kinnexus",
+    "extra_json_paths": ["search-params.json"],
+    "tx_server_url": "https://tx.dev.hl7.org.au/fhir",
+    "rewrite_igs": "/home/igs/0.0.1.tgz",
+    "extra_imports": [],
+    "outer_groups": [],
+    "links": [
+      {
+        "label": "Report Issue",
+        "url": "https://github.com"
+      },
+      {
+        "label": "Source Code",
+        "url": "https://github.com"
+      },
+      {
+        "label": "Implementation Guide",
+        "url": "https://github.com"
+      }
+    ]
+  },
+  "constants": {
+    "default_fhir_server": "",
+    "read_ids.patient": ""
+  },
+  "configs": {
+    "generic": {
+      "expectation": ["SHALL", "SHOULD", "MAY"],
+      "search_params_to_ignore": ["_count", "_sort", "_include"],
+      "rewrite_profile_url": {}
+    },
+    "profiles": {
+      "https://kinnexus.org/StructureDefinition/KinnexusPatient": {
+        "first_class_profile": "read"
+      }
+    },
+    "resources": {}
+  }
+}

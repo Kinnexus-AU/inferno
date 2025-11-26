@@ -1,0 +1,132 @@
+---
+:name: KinnexusQuestionnaireResponse
+:class_name: Kinnexusv001questionnaireresponseSequence
+:version: v0.0.1
+:reformatted_version: v001
+:resource: QuestionnaireResponse
+:profile_url: https://kinnexus.org/StructureDefinition/KinnexusQuestionnaireResponse
+:profile_name: Kinnexus QuestionnaireResponse
+:profile_version: 0.1.0
+:title: QuestionnaireResponse
+:short_description: Verify support for the server capabilities required by the Kinnexus
+  QuestionnaireResponse.
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory:
+  - patient
+  :must_support_or_mandatory: false
+- :names:
+  - questionnaire
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory:
+  - questionnaire
+  :must_support_or_mandatory: false
+- :names:
+  - status
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :questionnaire:
+    :paths:
+    - questionnaire
+    :full_paths:
+    - QuestionnaireResponse.questionnaire
+    :comparators: {}
+    :values: []
+    :type: canonical
+    :contains_multiple: false
+    :target_resource: Questionnaire
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - QuestionnaireResponse.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :target_resource: Patient
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - QuestionnaireResponse.status
+    :comparators: {}
+    :values:
+    - in-progress
+    - completed
+    - amended
+    - entered-in-error
+    - stopped
+    :type: code
+    :contains_multiple: false
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements: []
+:mandatory_elements:
+- QuestionnaireResponse.status
+- QuestionnaireResponse.item.linkId
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/questionnaire-answers-status
+  :path: status
+:references:
+- :path: QuestionnaireResponse.basedOn
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/CarePlan|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1
+- :path: QuestionnaireResponse.partOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1
+- :path: QuestionnaireResponse.subject
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: QuestionnaireResponse.encounter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+- :path: QuestionnaireResponse.author
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+- :path: QuestionnaireResponse.source
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
+:tests:
+- :id: kinnexus_v001_questionnaire_response_patient_search_test
+  :file_name: questionnaire_response_patient_search_test.rb
+- :id: kinnexus_v001_questionnaire_response_questionnaire_search_test
+  :file_name: questionnaire_response_questionnaire_search_test.rb
+- :id: kinnexus_v001_questionnaire_response_status_search_test
+  :file_name: questionnaire_response_status_search_test.rb
+- :id: kinnexus_v001_questionnaire_response_read_test
+  :file_name: questionnaire_response_read_test.rb
+- :id: kinnexus_v001_questionnaire_response_validation_test
+  :file_name: questionnaire_response_validation_test.rb
+- :id: kinnexus_v001_questionnaire_response_must_support_test
+  :file_name: questionnaire_response_must_support_test.rb
+:id: kinnexus_v001_questionnaire_response
+:file_name: questionnaire_response_group.rb
+:delayed_references: []
+:ig_id: fhir.kinnexus
