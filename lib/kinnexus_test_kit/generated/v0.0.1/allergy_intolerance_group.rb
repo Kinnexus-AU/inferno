@@ -4,6 +4,7 @@ require 'inferno_suite_generator/core/ig_demodata'
 require_relative 'allergy_intolerance/allergy_intolerance_patient_search_test'
 require_relative 'allergy_intolerance/allergy_intolerance_category_search_test'
 require_relative 'allergy_intolerance/allergy_intolerance_clinical_status_search_test'
+require_relative 'allergy_intolerance/allergy_intolerance_patient_category_clinical_status_search_test'
 require_relative 'allergy_intolerance/allergy_intolerance_read_test'
 require_relative 'allergy_intolerance/allergy_intolerance_validation_test'
 require_relative 'allergy_intolerance/allergy_intolerance_must_support_test'
@@ -31,6 +32,7 @@ following parameters:
 * patient
 * category
 * clinical-status
+* patient + category + clinical-status
 
 ### Search Parameters
 The first search uses the selected patient(s) from the prior launch sequence. Any subsequent searches will look for its parameter values from the results of the first search. For example, the `identifier` search in the patient sequence is performed by looking for an existing `Patient.identifier` from any of the resources returned in the `_id` search. If a value cannot be found this way, the search is skipped.
@@ -79,6 +81,7 @@ read succeeds.
       test from: :kinnexus_v001_allergy_intolerance_patient_search_test
       test from: :kinnexus_v001_allergy_intolerance_category_search_test
       test from: :kinnexus_v001_allergy_intolerance_clinical_status_search_test
+      test from: :kinnexus_v001_allergy_intolerance_patient_category_clinical_status_search_test
       test from: :kinnexus_v001_allergy_intolerance_read_test
       test from: :kinnexus_v001_allergy_intolerance_validation_test
       test from: :kinnexus_v001_allergy_intolerance_must_support_test

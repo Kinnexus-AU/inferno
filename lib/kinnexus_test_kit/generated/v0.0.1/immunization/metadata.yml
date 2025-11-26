@@ -32,6 +32,13 @@
   :expectation: MAY
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - vaccine-code
+  - date
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 :search_definitions:
   :patient:
     :paths:
@@ -148,6 +155,8 @@
   :file_name: immunization_vaccine_code_search_test.rb
 - :id: kinnexus_v001_immunization_date_search_test
   :file_name: immunization_date_search_test.rb
+- :id: kinnexus_v001_immunization_patient_vaccine_code_date_search_test
+  :file_name: immunization_patient_vaccine_code_date_search_test.rb
 - :id: kinnexus_v001_immunization_read_test
   :file_name: immunization_read_test.rb
 - :id: kinnexus_v001_immunization_validation_test

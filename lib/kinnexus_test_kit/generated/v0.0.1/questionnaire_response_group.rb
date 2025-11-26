@@ -4,6 +4,7 @@ require 'inferno_suite_generator/core/ig_demodata'
 require_relative 'questionnaire_response/questionnaire_response_patient_search_test'
 require_relative 'questionnaire_response/questionnaire_response_questionnaire_search_test'
 require_relative 'questionnaire_response/questionnaire_response_status_search_test'
+require_relative 'questionnaire_response/questionnaire_response_questionnaire_patient_status_search_test'
 require_relative 'questionnaire_response/questionnaire_response_read_test'
 require_relative 'questionnaire_response/questionnaire_response_validation_test'
 require_relative 'questionnaire_response/questionnaire_response_must_support_test'
@@ -70,7 +71,6 @@ read succeeds.
 
       id :kinnexus_v001_questionnaire_response
       run_as_group
-      optional
 
       def self.metadata
         @metadata ||= InfernoSuiteGenerator::Generator::GroupMetadata.new(YAML.load_file(File.join(__dir__, 'questionnaire_response', 'metadata.yml'), aliases: true))
@@ -79,6 +79,7 @@ read succeeds.
       test from: :kinnexus_v001_questionnaire_response_patient_search_test
       test from: :kinnexus_v001_questionnaire_response_questionnaire_search_test
       test from: :kinnexus_v001_questionnaire_response_status_search_test
+      test from: :kinnexus_v001_questionnaire_response_questionnaire_patient_status_search_test
       test from: :kinnexus_v001_questionnaire_response_read_test
       test from: :kinnexus_v001_questionnaire_response_validation_test
       test from: :kinnexus_v001_questionnaire_response_must_support_test

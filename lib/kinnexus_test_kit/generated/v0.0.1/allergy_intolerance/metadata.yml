@@ -33,6 +33,14 @@
   :expectation: SHALL
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  - clinical-status
+  :names_not_must_support_or_mandatory:
+  - category
+  :must_support_or_mandatory: false
 :search_definitions:
   :patient:
     :paths:
@@ -143,6 +151,8 @@
   :file_name: allergy_intolerance_category_search_test.rb
 - :id: kinnexus_v001_allergy_intolerance_clinical_status_search_test
   :file_name: allergy_intolerance_clinical_status_search_test.rb
+- :id: kinnexus_v001_allergy_intolerance_patient_category_clinical_status_search_test
+  :file_name: allergy_intolerance_patient_category_clinical_status_search_test.rb
 - :id: kinnexus_v001_allergy_intolerance_read_test
   :file_name: allergy_intolerance_read_test.rb
 - :id: kinnexus_v001_allergy_intolerance_validation_test

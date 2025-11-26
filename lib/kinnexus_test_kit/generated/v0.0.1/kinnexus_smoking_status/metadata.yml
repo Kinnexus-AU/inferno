@@ -27,6 +27,12 @@
   :expectation: SHALL
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - code
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 :search_definitions:
   :patient:
     :paths:
@@ -140,6 +146,8 @@
   :file_name: kinnexus_smoking_status_patient_search_test.rb
 - :id: kinnexus_v001_kinnexus_smoking_status_code_search_test
   :file_name: kinnexus_smoking_status_code_search_test.rb
+- :id: kinnexus_v001_kinnexus_smoking_status_patient_code_search_test
+  :file_name: kinnexus_smoking_status_patient_code_search_test.rb
 - :id: kinnexus_v001_kinnexus_smoking_status_read_test
   :file_name: kinnexus_smoking_status_read_test.rb
 - :id: kinnexus_v001_kinnexus_smoking_status_validation_test

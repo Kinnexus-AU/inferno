@@ -34,6 +34,15 @@
   :expectation: SHALL
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
+- :expectation: SHOULD
+  :names:
+  - questionnaire
+  - patient
+  - status
+  :names_not_must_support_or_mandatory:
+  - questionnaire
+  - patient
+  :must_support_or_mandatory: false
 :search_definitions:
   :questionnaire:
     :paths:
@@ -120,6 +129,8 @@
   :file_name: questionnaire_response_questionnaire_search_test.rb
 - :id: kinnexus_v001_questionnaire_response_status_search_test
   :file_name: questionnaire_response_status_search_test.rb
+- :id: kinnexus_v001_questionnaire_response_questionnaire_patient_status_search_test
+  :file_name: questionnaire_response_questionnaire_patient_status_search_test.rb
 - :id: kinnexus_v001_questionnaire_response_read_test
   :file_name: questionnaire_response_read_test.rb
 - :id: kinnexus_v001_questionnaire_response_validation_test

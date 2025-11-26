@@ -4,6 +4,7 @@ require 'inferno_suite_generator/core/ig_demodata'
 require_relative 'immunization/immunization_patient_search_test'
 require_relative 'immunization/immunization_vaccine_code_search_test'
 require_relative 'immunization/immunization_date_search_test'
+require_relative 'immunization/immunization_patient_vaccine_code_date_search_test'
 require_relative 'immunization/immunization_read_test'
 require_relative 'immunization/immunization_validation_test'
 require_relative 'immunization/immunization_must_support_test'
@@ -30,6 +31,7 @@ following parameters:
 
 * patient
 * vaccine-code
+* patient + vaccine-code + date
 
 ### Search Parameters
 The first search uses the selected patient(s) from the prior launch sequence. Any subsequent searches will look for its parameter values from the results of the first search. For example, the `identifier` search in the patient sequence is performed by looking for an existing `Patient.identifier` from any of the resources returned in the `_id` search. If a value cannot be found this way, the search is skipped.
@@ -78,6 +80,7 @@ read succeeds.
       test from: :kinnexus_v001_immunization_patient_search_test
       test from: :kinnexus_v001_immunization_vaccine_code_search_test
       test from: :kinnexus_v001_immunization_date_search_test
+      test from: :kinnexus_v001_immunization_patient_vaccine_code_date_search_test
       test from: :kinnexus_v001_immunization_read_test
       test from: :kinnexus_v001_immunization_validation_test
       test from: :kinnexus_v001_immunization_must_support_test

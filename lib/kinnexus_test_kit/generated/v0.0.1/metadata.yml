@@ -33,6 +33,12 @@
     :expectation: SHALL
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
+  - :expectation: SHALL
+    :names:
+    - patient
+    - code
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   :search_definitions:
     :patient:
       :paths:
@@ -215,6 +221,12 @@
   - :names:
     - code
     :expectation: SHALL
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
+  - :expectation: SHALL
+    :names:
+    - patient
+    - code
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   :search_definitions:
@@ -401,6 +413,12 @@
     :expectation: SHALL
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
+  - :expectation: SHALL
+    :names:
+    - patient
+    - code
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   :search_definitions:
     :patient:
       :paths:
@@ -545,6 +563,14 @@
     :expectation: SHALL
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
+  - :expectation: SHALL
+    :names:
+    - patient
+    - category
+    - clinical-status
+    :names_not_must_support_or_mandatory:
+    - category
+    :must_support_or_mandatory: false
   :search_definitions:
     :patient:
       :paths:
@@ -676,6 +702,12 @@
   - :names:
     - status
     :expectation: SHALL
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
+  - :expectation: SHOULD
+    :names:
+    - patient
+    - status
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   :search_definitions:
@@ -846,6 +878,13 @@
   - :names:
     - date
     :expectation: MAY
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
+  - :expectation: SHALL
+    :names:
+    - patient
+    - vaccine-code
+    - date
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   :search_definitions:
@@ -1163,6 +1202,15 @@
     :expectation: SHALL
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
+  - :expectation: SHOULD
+    :names:
+    - questionnaire
+    - patient
+    - status
+    :names_not_must_support_or_mandatory:
+    - questionnaire
+    - patient
+    :must_support_or_mandatory: false
   :search_definitions:
     :questionnaire:
       :paths:

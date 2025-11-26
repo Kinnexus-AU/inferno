@@ -3,6 +3,7 @@
 require 'inferno_suite_generator/core/ig_demodata'
 require_relative 'encounter/encounter_patient_search_test'
 require_relative 'encounter/encounter_status_search_test'
+require_relative 'encounter/encounter_patient_status_search_test'
 require_relative 'encounter/encounter_read_test'
 require_relative 'encounter/encounter_validation_test'
 require_relative 'encounter/encounter_must_support_test'
@@ -76,6 +77,7 @@ read succeeds.
 
       test from: :kinnexus_v001_encounter_patient_search_test
       test from: :kinnexus_v001_encounter_status_search_test
+      test from: :kinnexus_v001_encounter_patient_status_search_test
       test from: :kinnexus_v001_encounter_read_test
       test from: :kinnexus_v001_encounter_validation_test
       test from: :kinnexus_v001_encounter_must_support_test

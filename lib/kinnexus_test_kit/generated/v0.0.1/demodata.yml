@@ -317,4 +317,6 @@
       state: NSW
       postalCode: '2148'
       country: AU
-:patch_body_list: {}
+:patch_body_list:
+  :FHIRPATHPatchJson: {}
+  :JSONPatch: {}
