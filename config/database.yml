@@ -14,6 +14,10 @@ production:
   database: <%= ENV['POSTGRES_DB'] %>
   username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
+  sslmode: verify-full
+  sslrootcert: /certs/root.crt
+  sslcert: /certs/client-cert.pem
+  sslkey: /certs/client-key.pem
 
 test:
   adapter: sqlite
